@@ -1,29 +1,54 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #14213d;
+}
+
 a {
-    padding: 10px;
-    margin: 10; 
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
 }
 .navbar {
-    background-color: black;
-    padding: 10px;
+  animation-name: navbar;
+  width: fit-content;
+  position: fixed;
+  height: 100%;
+  left: 0px;
+  top: 0px;
 }
-a:hover {
-    text-decoration: underline;
+
+.navbar div {
+  position: relative;
+  text-align: center;
+  width: 150px;
+  top: 35%;
+  border: 1px solid white;
+  background-color: #14213d;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.3s;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
+
+.navbar div:hover {
+  box-shadow: inset 150px 0 0 0 white;
+}
+#link:hover {
+    color: #14213d;
+  }
 .ticboard {
-    
-    margin: 0 auto;
-    width: 200px;
-    margin-top: 100px;
+  margin: 0 auto;
 }
 .ticrow {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ticrow div {
-    font-size: 48px;
-    margin: 10px;
-    width: 50px;
-    text-align: center;
+
+  text-align: center;
+}
+
+@keyframes navbar {
 }

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import "../css/tic.css";
 
 class Toe extends Component {
   state = {
     board: [
-      ["_", "_", "_"],
-      ["_", "_", "_"],
-      ["_", "_", "_"],
+      [" ", " ", " "],
+      [" ", " ", " "],
+      [" ", " ", " "],
     ],
     bestMove: {},
     player: this.props.player,
@@ -41,7 +42,7 @@ class Toe extends Component {
   isFree(board) {
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        if (board[i][j] === "_") return true;
+        if (board[i][j] === " ") return true;
       }
     }
     return false;
@@ -58,10 +59,10 @@ class Toe extends Component {
       let best = -100;
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
-          if (board[i][j] === "_") {
+          if (board[i][j] === " ") {
             board[i][j] = this.state.ai;
             let result = this.minimax(board, false);
-            board[i][j] = "_";
+            board[i][j] = " ";
             best = Math.max(best, result);
           }
         }
@@ -71,10 +72,10 @@ class Toe extends Component {
       let best = 100;
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
-          if (board[i][j] == "_") {
+          if (board[i][j] == " ") {
             board[i][j] = this.state.player;
             let result = this.minimax(board, true);
-            board[i][j] = "_";
+            board[i][j] = " ";
             best = Math.min(best, result);
           }
         }
@@ -86,10 +87,10 @@ class Toe extends Component {
     let finalScore = -100;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        if (board[i][j] == "_") {
+        if (board[i][j] == " ") {
           board[i][j] = this.state.ai;
           let score = this.minimax(board, false);
-          board[i][j] = "_";
+          board[i][j] = " ";
           if (score > finalScore) {
             finalScore = score;
             this.setState({ bestMove: { i, j } });
@@ -122,7 +123,7 @@ class Toe extends Component {
   playerMove = (i, j) => {
     if (!this.state.endGame && !this.state.tie && !this.state.thinking) {
       let board = [...this.state.board];
-      if (board[i][j] == "_") {
+      if (board[i][j] == " ") {
         board[i][j] = this.state.player;
         this.setState({ board });
         this.setState({ thinking: true });
@@ -146,35 +147,47 @@ class Toe extends Component {
         {this.state.endGame && <span>{this.state.endGame} Won!</span>}
         {this.state.tie && <span>Tie!</span>}
         <div className="ticrow">
-          <div onClick={() => this.playerMove(0, 0)}>
+          <div
+            className="cell border bottom"
+            onClick={() => this.playerMove(0, 0)}
+          >
             {this.state.board[0][0]}
           </div>
-          <div onClick={() => this.playerMove(0, 1)}>
+          <div
+            className="cell border bottom"
+            onClick={() => this.playerMove(0, 1)}
+          >
             {this.state.board[0][1]}
           </div>
-          <div onClick={() => this.playerMove(0, 2)}>
+          <div className="cell bottom" onClick={() => this.playerMove(0, 2)}>
             {this.state.board[0][2]}
           </div>
         </div>
         <div className="ticrow">
-          <div onClick={() => this.playerMove(1, 0)}>
+          <div
+            className="cell border bottom"
+            onClick={() => this.playerMove(1, 0)}
+          >
             {this.state.board[1][0]}
           </div>
-          <div onClick={() => this.playerMove(1, 1)}>
+          <div
+            className="cell border bottom"
+            onClick={() => this.playerMove(1, 1)}
+          >
             {this.state.board[1][1]}
           </div>
-          <div onClick={() => this.playerMove(1, 2)}>
+          <div className="cell bottom" onClick={() => this.playerMove(1, 2)}>
             {this.state.board[1][2]}
           </div>
         </div>
         <div className="ticrow">
-          <div onClick={() => this.playerMove(2, 0)}>
+          <div className="cell border" onClick={() => this.playerMove(2, 0)}>
             {this.state.board[2][0]}
           </div>
-          <div onClick={() => this.playerMove(2, 1)}>
+          <div className="cell border" onClick={() => this.playerMove(2, 1)}>
             {this.state.board[2][1]}
           </div>
-          <div onClick={() => this.playerMove(2, 2)}>
+          <div className="cell" onClick={() => this.playerMove(2, 2)}>
             {this.state.board[2][2]}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import Toe from "../components/Toe";
+import "../css/tic.css";
 
 function TicTacToe() {
   const [ai, setAi] = useState("");
@@ -7,12 +8,12 @@ function TicTacToe() {
   const [chose, setChose] = useState(false);
 
   function handleOption(option) {
-    if (option == 'X') {
-        setPlayer('X');
-        setAi('O');
+    if (option == "X") {
+      setPlayer("X");
+      setAi("O");
     } else {
-        setPlayer('O');
-        setAi('X');
+      setPlayer("O");
+      setAi("X");
     }
     setChose(true);
   }
@@ -21,12 +22,15 @@ function TicTacToe() {
   }
   return (
     <div className="ticContent">
-        <h1>Tic Tac Toe (Unbeatable)</h1>
-      {!chose && <div className="option_btns">
-        <button onClick={() => handleOption("X")}>X</button>
-        <button onClick={() => handleOption("O")}>O</button>
-      </div>}
-      {chose && <Toe ai={ai} player={player} handleRetry={handleRetry}/>}
+      <h1 id="title">Tic Tac Toe (Unbeatable)</h1>
+      {!chose && (
+        <div className="option_btns">
+          <h1>Select the Player</h1>
+          <button onClick={() => handleOption("X")}>X</button>
+          <button onClick={() => handleOption("O")}>O</button>
+        </div>
+      )}
+      {chose && <Toe ai={ai} player={player} handleRetry={handleRetry} />}
     </div>
   );
 }
