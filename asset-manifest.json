@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/algo-games/static/css/main.bfec3802.css",
-    "main.js": "/algo-games/static/js/main.7b02a55b.js",
+    "main.css": "/algo-games/static/css/main.45125032.css",
+    "main.js": "/algo-games/static/js/main.fd19b2c9.js",
     "static/js/787.0401fd21.chunk.js": "/algo-games/static/js/787.0401fd21.chunk.js",
     "index.html": "/algo-games/index.html",
-    "main.bfec3802.css.map": "/algo-games/static/css/main.bfec3802.css.map",
-    "main.7b02a55b.js.map": "/algo-games/static/js/main.7b02a55b.js.map",
+    "main.45125032.css.map": "/algo-games/static/css/main.45125032.css.map",
+    "main.fd19b2c9.js.map": "/algo-games/static/js/main.fd19b2c9.js.map",
     "787.0401fd21.chunk.js.map": "/algo-games/static/js/787.0401fd21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfec3802.css",
-    "static/js/main.7b02a55b.js"
+    "static/css/main.45125032.css",
+    "static/js/main.fd19b2c9.js"
   ]
 }
