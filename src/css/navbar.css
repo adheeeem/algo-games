@@ -1,0 +1,29 @@
+a {
+    padding: 10px;
+    margin: 10; 
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    background-color: black;
+    padding: 10px;
+}
+a:hover {
+    text-decoration: underline;
+}
+.ticboard {
+    
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 100px;
+}
+.ticrow {
+    display: flex;
+    justify-content: center;
+}
+.ticrow div {
+    font-size: 48px;
+    margin: 10px;
+    width: 50px;
+    text-align: center;
+}
