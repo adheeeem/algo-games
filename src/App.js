@@ -2,6 +2,7 @@ import "./App.css";
 import Toe from "./components/Toe";
 import TicTacToe from "./games/TicTacToe";
 import Navbar from "./components/Navbar";
+import 'remixicon/fonts/remixicon.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {

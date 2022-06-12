@@ -144,8 +144,6 @@ class Toe extends Component {
   render() {
     return (
       <div className="ticboard">
-        {this.state.endGame && <span>{this.state.endGame} Won!</span>}
-        {this.state.tie && <span>Tie!</span>}
         <div className="ticrow">
           <div
             className="cell border bottom"
@@ -192,8 +190,11 @@ class Toe extends Component {
           </div>
         </div>
         {this.isRetry() && (
-          <button onClick={this.props.handleRetry}>Retry</button>
+          <button id="retryBtn" onClick={this.props.handleRetry}><i style={{color: 'white'}} class="ri-repeat-line"></i></button>
         )}
+        <br />
+        {this.state.endGame && <span id="message">{this.state.endGame} Won!</span>}
+        {this.state.tie && <span id="message">Tie!</span>}
       </div>
     );
   }

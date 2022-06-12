@@ -22,7 +22,9 @@ function TicTacToe() {
   }
   return (
     <div className="ticContent">
-      <h1 id="title">Tic Tac Toe (Unbeatable)</h1>
+      <div id="title_div">
+        <span id="title">Tic Tac Toe (Unbeatable)</span>
+      </div>
       {!chose && (
         <div className="option_btns">
           <h1>Select the Player</h1>

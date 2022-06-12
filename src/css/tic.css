@@ -39,4 +39,21 @@
     color: #14213d;
     background-color: white;
     width: fit-content;
+    font-size: 40px;
+    margin: 20px;
+}
+#retryBtn {
+    width: 50px;
+    height: 50px;
+    background-color: #14213d;
+    border: 1px solid white;
+    font-size: 25px;
+    color: white;
+    border-radius: 4px;
+    margin: 10px;
+}
+#message {
+    background-color: red;
+    font-size: 25px;
+    padding: 5px;
 }
