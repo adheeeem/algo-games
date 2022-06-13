@@ -194,7 +194,7 @@ class Toe extends Component {
         )}
         <br />
         {this.state.endGame && <span id="message">{this.state.endGame} Won!</span>}
-        {this.state.tie && <span id="message">Tie!</span>}
+        {this.state.tie && <span id="message">Draw!</span>}
       </div>
     );
   }

@@ -41,6 +41,10 @@
     width: fit-content;
     font-size: 40px;
     margin: 20px;
+    font-weight: bold;
+}
+#title_div {
+    margin: 50px;
 }
 #retryBtn {
     width: 50px;

@@ -10,35 +10,33 @@ a {
   color: white;
 }
 .navbar {
-  animation-name: navbar;
   width: fit-content;
   position: relative;
   left: 0;
   top: 35%;
 }
 .navbar-elements {
-    position: absolute;
-    height: 100%;
+  position: fixed;
+  height: 100%;
 }
 #trigger {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    margin-left: 155px;
-    top: 38%;
-    font-size: 50px;
-    font-weight: bold;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-left: 155px;
+  top: 38%;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
 }
 i {
-    color: #14213d;
+  color: #14213d;
 }
 
-
 .navbar div {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   width: 150px;
   border: 1px solid white;
@@ -53,8 +51,8 @@ i {
   box-shadow: inset 150px 0 0 0 white;
 }
 #link:hover {
-    color: #14213d;
-  }
+  color: #14213d;
+}
 .ticboard {
   margin: 0 auto;
 }
@@ -64,9 +62,5 @@ i {
   align-items: center;
 }
 .ticrow div {
-
   text-align: center;
-}
-
-@keyframes navbar {
 }
