@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/algo-games/static/css/main.200f5f20.css",
-    "main.js": "/algo-games/static/js/main.3a6e61e9.js",
+    "main.css": "/algo-games/static/css/main.d4153edb.css",
+    "main.js": "/algo-games/static/js/main.5e6473a3.js",
     "static/js/787.0401fd21.chunk.js": "/algo-games/static/js/787.0401fd21.chunk.js",
     "static/media/remixicon.svg?t=1590207869815": "/algo-games/static/media/remixicon.9cedd2150922ead84869.svg",
     "static/media/remixicon.eot?t=1590207869815": "/algo-games/static/media/remixicon.5cb99e6cba5a4619063f.eot",
@@ -9,12 +9,12 @@
     "static/media/remixicon.woff?t=1590207869815": "/algo-games/static/media/remixicon.8d09fa11700ed63cf96e.woff",
     "static/media/remixicon.woff2?t=1590207869815": "/algo-games/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
     "index.html": "/algo-games/index.html",
-    "main.200f5f20.css.map": "/algo-games/static/css/main.200f5f20.css.map",
-    "main.3a6e61e9.js.map": "/algo-games/static/js/main.3a6e61e9.js.map",
+    "main.d4153edb.css.map": "/algo-games/static/css/main.d4153edb.css.map",
+    "main.5e6473a3.js.map": "/algo-games/static/js/main.5e6473a3.js.map",
     "787.0401fd21.chunk.js.map": "/algo-games/static/js/787.0401fd21.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.200f5f20.css",
-    "static/js/main.3a6e61e9.js"
+    "static/css/main.d4153edb.css",
+    "static/js/main.5e6473a3.js"
   ]
 }
