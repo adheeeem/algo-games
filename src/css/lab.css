@@ -60,3 +60,10 @@
 #pointc {
   background-color: grey;
 }
+
+@media screen and (max-width: 500px) {
+  .lab_cell {
+    width: 20px;
+    height: 20px;
+  }
+}
