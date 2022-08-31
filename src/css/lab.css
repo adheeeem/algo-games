@@ -1,0 +1,62 @@
+.lab_cell {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  margin: 2px;
+  background-color: white;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.lab_cell:hover {
+  cursor: pointer;
+}
+
+.lab_board {
+  display: inline-grid;
+}
+
+.board_parent {
+  text-align: center;
+}
+
+.points > div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.points {
+  display: flex;
+  justify-content: center;
+}
+
+.points > div:hover {
+  cursor: pointer;
+}
+
+#pointa {
+  background-color: rgb(209, 74, 74);
+}
+
+#pointb {
+  background-color: rgb(71, 71, 204);
+}
+
+#pointc {
+  background-color: grey;
+}

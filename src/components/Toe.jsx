@@ -19,22 +19,22 @@ class Toe extends Component {
   // Function to check for the winner
   isWin(board) {
     for (let i = 0; i < 3; i++) {
-      if (board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
-        if (board[i][0] == this.state.ai) return 1;
-        else if (board[i][0] == this.state.player) return -1;
+      if (board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
+        if (board[i][0] === this.state.ai) return 1;
+        else if (board[i][0] === this.state.player) return -1;
       }
-      if (board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
-        if (board[0][i] == this.state.ai) return 1;
-        else if (board[0][i] == this.state.player) return -1;
+      if (board[0][i] === board[1][i] && board[1][i] === board[2][i]) {
+        if (board[0][i] === this.state.ai) return 1;
+        else if (board[0][i] === this.state.player) return -1;
       }
     }
-    if (board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
-      if (board[0][0] == this.state.ai) return 1;
-      else if (board[0][0] == this.state.player) return -1;
+    if (board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+      if (board[0][0] === this.state.ai) return 1;
+      else if (board[0][0] === this.state.player) return -1;
     }
-    if (board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
-      if (board[0][2] == this.state.ai) return 1;
-      else if (board[0][2] == this.state.player) return -1;
+    if (board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+      if (board[0][2] === this.state.ai) return 1;
+      else if (board[0][2] === this.state.player) return -1;
     }
   }
 
@@ -72,7 +72,7 @@ class Toe extends Component {
       let best = 100;
       for (let i = 0; i < 3; i++) {
         for (let j = 0; j < 3; j++) {
-          if (board[i][j] == " ") {
+          if (board[i][j] === " ") {
             board[i][j] = this.state.player;
             let result = this.minimax(board, true);
             board[i][j] = " ";
@@ -87,7 +87,7 @@ class Toe extends Component {
     let finalScore = -100;
     for (let i = 0; i < 3; i++) {
       for (let j = 0; j < 3; j++) {
-        if (board[i][j] == " ") {
+        if (board[i][j] === " ") {
           board[i][j] = this.state.ai;
           let score = this.minimax(board, false);
           board[i][j] = " ";
@@ -111,8 +111,8 @@ class Toe extends Component {
         this.setState({ board });
         let score = this.isWin(board);
         if (score) {
-          if (score == -1) this.setState({ endGame: this.state.player });
-          if (score == 1) this.setState({ endGame: this.state.ai });
+          if (score === -1) this.setState({ endGame: this.state.player });
+          if (score === 1) this.setState({ endGame: this.state.ai });
         }
         if (!this.isFree(this.state.board)) this.setState({ tie: "Tie" });
         this.setState({ thinking: false });
@@ -123,15 +123,15 @@ class Toe extends Component {
   playerMove = (i, j) => {
     if (!this.state.endGame && !this.state.tie && !this.state.thinking) {
       let board = [...this.state.board];
-      if (board[i][j] == " ") {
+      if (board[i][j] === " ") {
         board[i][j] = this.state.player;
         this.setState({ board });
         this.setState({ thinking: true });
         console.log("Thinking", this.state.thinking);
         let score = this.isWin(this.state.board);
         if (score) {
-          if (score == -1) this.setState({ endGame: "O" });
-          if (score == 1) this.setState({ endGame: "X" });
+          if (score === -1) this.setState({ endGame: "O" });
+          if (score === 1) this.setState({ endGame: "X" });
         } else this.aiMove(this.state.board);
       }
     }
@@ -190,10 +190,14 @@ class Toe extends Component {
           </div>
         </div>
         {this.isRetry() && (
-          <button id="retryBtn" onClick={this.props.handleRetry}><i style={{color: 'white'}} class="ri-repeat-line"></i></button>
+          <button id="retryBtn" onClick={this.props.handleRetry}>
+            <i style={{ color: "white" }} class="ri-repeat-line"></i>
+          </button>
         )}
         <br />
-        {this.state.endGame && <span id="message">{this.state.endGame} Won!</span>}
+        {this.state.endGame && (
+          <span id="message">{this.state.endGame} Won!</span>
+        )}
         {this.state.tie && <span id="message">Draw!</span>}
       </div>
     );

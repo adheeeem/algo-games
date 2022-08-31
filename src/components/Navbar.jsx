@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "../css/navbar.css";
 import { Link } from "react-router-dom";
 
@@ -22,12 +22,12 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <Link to="tictactoe" id="link">
+          <Link to="games" id="link">
             Games
           </Link>
         </div>
       </div>
-      <div id="trigger" onClick={handleClick}><i class={iconClass}></i></div>
+      <div id="trigger" onClick={handleClick}><i className={iconClass}></i></div>
     </div>
   );
 };

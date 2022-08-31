@@ -4,3 +4,8 @@
   margin: 0px;
   color: white;
 }
+*::selection {
+  /* color: #14213d;
+  background-color: white; */
+  background-color: rgb(177, 62, 17);
+}

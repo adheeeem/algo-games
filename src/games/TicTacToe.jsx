@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Toe from "../components/Toe";
 import "../css/tic.css";
 
@@ -8,7 +8,7 @@ function TicTacToe() {
   const [chose, setChose] = useState(false);
 
   function handleOption(option) {
-    if (option == "X") {
+    if (option === "X") {
       setPlayer("X");
       setAi("O");
     } else {
